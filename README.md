@@ -1,7 +1,7 @@
 # 프로젝트명
 **[ 과제 심화 활동 ]** 문자열 덧셈 계산 웹 프로그램 ( java-calculator-precourse )
 
-!!!!! 동영상 첨부 예정 !!!!!
+[동영상 보기](https://theGreatWest.github.io/src/main/resources/static/assets/videos/문자열덧셈계산기_실행영상.mp4)
 
 ---
 
