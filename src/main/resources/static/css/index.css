@@ -1,0 +1,171 @@
+body{
+    background-color: #f1e6ff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+
+    user-select: none;
+}
+
+#notification1{
+    height: 15%;
+    width: 800px;
+    margin: 5px;
+    margin-top: 50px;
+    text-align: center;
+}
+#notification2{
+    height: 25%;
+    width: 550px;
+    margin: 10px;
+    text-align: center;
+
+    border: 2px solid #989898;
+    border-radius: 30px;
+
+    background-color: #E4E4E4;
+}
+
+span{
+    color: #CC0101;
+}
+
+#calculator{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 330px;
+    height: 400px;
+    margin-top: 65px;
+    margin-bottom: 10px;
+
+    border-radius: 30px;
+    border: 2.5px solid black;
+
+    box-shadow: 0px 5px 12px gray;
+
+    background-color: #E29BDA;
+}
+
+#input_string_and_result{
+    width: 244px;
+    height: 68px;
+    margin-top: 15px;
+    padding-right: 13px;
+    padding-left: 13px;
+    font-size: 24px;
+    align-items: center;
+    color: black;
+
+    display: flex;
+    justify-content: flex-end;
+
+    border-radius: 15px;
+    border: 2.5px solid black;
+
+    background-color: white;
+}
+
+#res{
+    color: black;
+    font-size: 24px;
+}
+
+#keyPad{
+    margin-top: 15px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+
+    width: 270px;
+    height: 42px;
+    margin-bottom: 17px;
+}
+
+#row1{
+    margin-top: 15px;
+}
+
+.number{
+    display: inline-block;
+
+    width: 70px;
+    height: 42px;
+
+    background-color: white;
+
+    border: 2.5px solid black;
+    border-radius: 12px;
+
+    text-align: center;
+    line-height: 10px;
+
+    transition: box-shadow 0.3s ease;
+}
+
+.inner-shadow{
+    box-shadow: inset 0 0 9px gray;
+}
+
+.change_color{
+    background-color: black;
+}
+
+#form_box{
+    width: 450px;
+    height: 60px;
+    margin: 40px;
+    margin-bottom: 90px;
+
+    background-color: white;
+    box-shadow: 0px 3px 10px gray;
+}
+
+form{
+    width: 450px;
+    height: 38px;
+    margin-top: 12px;
+
+    display: flex;
+    justify-content: space-between;
+    line-height: 70px;
+}
+
+#delete_all{
+    width: 95px;
+    text-align: center;
+    line-height: 38px;
+    margin-right: 10px;
+
+    background-color: #797979;
+    color: white;
+
+    border: 1px solid black;
+    border-radius: 12px;
+}
+
+input{
+    width: 320px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: none;
+    font-size: 24px;
+    padding-left: 10px;
+    background-color: white;
+}
+
+input:focus{
+    outline: none;
+    border: none;
+    background-color: white;
+}
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}

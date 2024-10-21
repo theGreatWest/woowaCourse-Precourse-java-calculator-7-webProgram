@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}">
+    <title>문자열 계산기</title>
+</head>
+<body>
+<div id="notification1">
+    <h1>문자열 덧셈 계산기</h1>
+    <h3>구분자( , 또는 : )로 구분하여 양수인 숫자를 입력하고 Enter(↵)를 누르면 덧셈 결과가 출력됩니다</h3>
+</div>
+<div id="notification2">
+    <h2>💡 커스텀 구분자 사용법 💡</h2>
+    <h3>
+        문자열 맨 앞에 <span>// 지정_구분자 \n</span> 를 순서를 지켜 추가해 주세요<br><br>
+        <b>[ 입력 예시 ]</b> <span>//.\n</span>1,2:3.4<br>
+        [ 출력 예시 ] 10
+    </h3>
+</div>
+<div id="calculator">
+    <div id="input_string_and_result">
+        <span id="res" th:text="${name}"></span>
+    </div>
+    <div id="keyPad">
+        <div class="row" id="row1">
+            <div class="number" data-value="0"><h1>0</h1></div>
+            <div class="number" data-value="1"><h1>1</h1></div>
+            <div class="number" data-value="2"><h1>2</h1></div>
+        </div>
+        <div class="row">
+            <div class="number" data-value="3"><h1>3</h1></div>
+            <div class="number" data-value="4"><h1>4</h1></div>
+            <div class="number" data-value="5"><h1>5</h1></div>
+        </div>
+        <div class="row">
+            <div class="number" data-value="6"><h1>6</h1></div>
+            <div class="number" data-value="7"><h1>7</h1></div>
+            <div class="number" data-value="8"><h1>8</h1></div>
+        </div>
+        <div class="row">
+            <div class="number" data-value="9"><h1>9</h1></div>
+            <div class="number" data-value="delete"><h2>⬅︎</h2></div>
+            <div class="number" data-value="plus"><h2>✚=</h2></div>
+        </div>
+    </div>
+</div>
+
+<div id="form_box">
+    <form name="input_string" action="/strCalculator" method="Get">
+        <input type="text" id="inputString" name="inputString" required>
+        <div id="delete_all">전체 지우기</div>
+    </form>
+</div>
+
+<script>
+    let sum = 0;
+    let tmp = '';
+</script>
+<script th:src="@{/js/index_keypad.js}"></script>
+<script th:src="@{/js/index_deleteAll.js}"></script>
+<script th:src="@{/js/index_sync.js}"></script>
+</body>
+</html>
