@@ -20,9 +20,7 @@
     </h3>
 </div>
 <div id="calculator">
-    <div id="input_string_and_result">
-        <span id="res" th:text="${name}"></span>
-    </div>
+    <div id="input_string_and_result"></div>
     <div id="keyPad">
         <div class="row" id="row1">
             <div class="number" data-value="0"><h1>0</h1></div>
@@ -54,9 +52,11 @@
     </form>
 </div>
 
-<script>
+<script th:inline="javascript">
     let sum = 0;
     let tmp = '';
+
+    alert([[${errorMsg}]]);
 </script>
 <script th:src="@{/js/index_keypad.js}"></script>
 <script th:src="@{/js/index_deleteAll.js}"></script>

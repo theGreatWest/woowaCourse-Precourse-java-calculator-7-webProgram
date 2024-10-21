@@ -20,7 +20,9 @@ public class StrCalculatorController {
     @RequestMapping("/strCalculator")
     public String strCalculator(@RequestParam(name = "inputString") String inputValue, Model model) {
         System.out.println("입력 값: "+inputValue);
+        inputValue = inputValue.strip();
 
+        StrCalculatorModel res = new StrCalculatorModel();
         double sum = 0.0;
 
         try{
@@ -34,11 +36,11 @@ public class StrCalculatorController {
                 }
             }
         }catch (IllegalArgumentException e){
-            System.out.println(e.getMessage()+"-".repeat(58)+"\n다시 입력해 주세요.\n");
+//            System.out.println(e.getMessage()+"-".repeat(58)+"\n다시 입력해 주세요.\n");
+            model.addAttribute("errorMsg", e.getMessage()+"-".repeat(58)+"\n다시 입력해 주세요.\n");
             return "index";
         }
 
-        StrCalculatorModel res = new StrCalculatorModel();
         if(sum == (int)sum){
             res.setSumInt((int)sum);
             model.addAttribute("result", res.getSumInt());
