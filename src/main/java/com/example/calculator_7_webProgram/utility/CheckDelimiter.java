@@ -18,13 +18,16 @@ public class CheckDelimiter {
             if(slashIdx>newLineIdx){  // 순서가 바뀌는 경우만
                 throw new IllegalArgumentException("-".repeat(58)+"\n" +
                         "커스텀 구분자 지정시, 아래의 형식에 맞게 입력해 주세요.\n" +
-                        "➣ 문자열의 맨 앞에 지정해 주어야 합니다.\n" +
-                        "➣ [ //구분자\\n ]를 순서를 지켜 지정해 주어야 합니다.\n" +
-                        "➣ 커스텀 문자는 한 글자여야 합니다.\n");
+                        "➣ [ //구분자\\n ]를 순서를 지켜 지정해 주어야 합니다.\n");
             }
-
-            values[0] += "|\\"+inputValue.substring(slashIdx+2,newLineIdx);
+            values[0] += "|";
+            if(newLineIdx-slashIdx==3){
+                values[0] += "\\";
+            }
+            values[0] += inputValue.substring(slashIdx+2,newLineIdx);
             values[1] = inputValue.substring(0,slashIdx)+","+inputValue.substring(newLineIdx+2);
+
+            System.out.println(values[0] + "--> "+values[1]);
         }
 
         return values;
