@@ -28,7 +28,13 @@ numberBox.forEach(numberBox => {
                     inputField.value = inputField.value.slice(0,-1);
                     display.textContent = display.textContent.slice(0,-1);
 
-                    tmp = inputField.value;
+                    if(sum!=0 && tmp==''){
+                        sum = inputField.value;
+                    }else{
+                        tmp = inputField.value;
+                    }
+                    alert(sum+" / "+tmp);
+
                 }else if(value=='plus'){
                     if(tmp!=''){
                         sum += parseInt(tmp);
