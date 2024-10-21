@@ -1,6 +1,7 @@
 # 프로젝트명
-**[ 과제 심화 활동 ]** 문자열 덧셈 계산 웹 프로그램 ( [동영상 폴더로 이동](https://theGreatWest.github.io/src/main/resources/static/assets/videos) )<br>
-<img src="https://raw.githubusercontent.com/theGreatWest/woowaCourse-Precourse-java-calculator-7-webProgram/src/main/resources/static/assets/img/UI_real.png" alt="예시 이미지" width="200" />
+**[ 과제 심화 활동 ]** 문자열 덧셈 계산 웹 프로그램 ([실행 영상 다운로드] https://raw.githubusercontent.com/theGreatWest/woowaCourse-Precourse-java-calculator-7-webProgram
+/main/assets/videos/문자열덧셈계산기_실행영상.mp4))<br>
+![ ](https://raw.githubusercontent.com/theGreatWest/woowaCourse-Precourse-java-calculator-7-webProgram/main/src/main/resources/static/assets/img/UI_real.png)
 ---
 
 # 사용 설명서
